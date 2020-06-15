@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" packages="io.opentelemetry.sdk.proto">
+    <Appenders>
+        <List name="List">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} ${ot:traceid} - %msg%n"/>
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} ${java:os} - %msg%n"/>-->
+        </List>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="List"/>
+        </Root>
+    </Loggers>
+</Configuration>

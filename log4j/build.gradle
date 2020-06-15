@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'io.opentelemetry'
+version '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
+    implementation group: 'io.opentelemetry', name: 'opentelemetry-api', version: '0.4.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+    testImplementation group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3', classifier: 'tests'
+    testImplementation group: 'io.opentelemetry', name: 'opentelemetry-sdk', version: '0.4.1'
+    // For log4j async
+    testImplementation group: 'com.lmax', name: 'disruptor', version: '3.4.2'
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ot_bunyan_prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^0.8.3",
+    "@opentelemetry/core": "^0.8.3",
+    "@opentelemetry/exporter-jaeger": "^0.8.3",
+    "@opentelemetry/node": "^0.8.3",
+    "@opentelemetry/tracing": "^0.8.3",
+    "bunyan": "^1.8.12"
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" ><!--packages="io.opentelemetry.sdk.proto"-->
+    <Appenders>
+        <List name="SyncList">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %X{traceid} - %msg%n"/>
+            <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} ${java:os} - %msg%n"/>-->
+        </List>
+        <List name="AsyncList">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %X{traceid} - %msg%n"/>
+            <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} ${java:os} - %msg%n"/>-->
+        </List>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="SyncList"/>
+        </Root>
+        <AsyncLogger name="AsyncContextDataProviderTest" level="debug">
+            <AppenderRef ref="AsyncList"/>
+        </AsyncLogger>
+    </Loggers>
+</Configuration>
